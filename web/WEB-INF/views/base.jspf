@@ -1,0 +1,2 @@
+<%@ page import=", model.Student, model.Course, model.Professor" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
