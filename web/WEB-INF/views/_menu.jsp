@@ -12,17 +12,17 @@
 </head>
 <body>
     <div style="padding: 5px;">
-        <a href="${pageContext.request.contextPath}/homeServlet.a.b.c">Home</a>
+        <a href="${pageContext.request.contextPath}/home">Home</a>
         |
-        <a href="${pageContext.request.contextPath}/courseListServlet.a.b.c">Courses</a>
+        <a href="${pageContext.request.contextPath}/courses">Courses</a>
         |
-        <a href="${pageContext.request.contextPath}/professorListServlet.a.b.c">Professors</a>
+        <a href="${pageContext.request.contextPath}/professors">Professors</a>
         |
-        <a href="${pageContext.request.contextPath}/studentListServlet.a.b.c">Students</a>
+        <a href="${pageContext.request.contextPath}/students">Students</a>
         |
-        <a href="${pageContext.request.contextPath}/loginServlet.a.b.c">Login</a>
+        <a href="${pageContext.request.contextPath}/login">Login</a>
         |
-        <a href="${pageContext.request.contextPath}/logoutServlet.a.b.c">Logout</a>
+        <a href="${pageContext.request.contextPath}/logout">Logout</a>
     </div>
 </body>
 </html>
