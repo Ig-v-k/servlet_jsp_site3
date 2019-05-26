@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "home_servlet",
-            urlPatterns = "/homeServlet.a.b.c")
-public class HomeServlet extends HttpServlet {
-
-    private CourseImplDao courseImplDao = CourseImplDao.getInstance();
+@WebServlet(
+        name = "context_servlet",
+        urlPatterns = "/contextServlet.a.b.c"
+)
+public class ContextServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);

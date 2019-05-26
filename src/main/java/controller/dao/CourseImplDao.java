@@ -4,7 +4,7 @@ import model.Course;
 
 import java.util.List;
 
-public class CourseImplDao implements ImplCourseDao {
+public class CourseImplDao extends ImplCourseDao {
 
     public CourseImplDao() {
     }

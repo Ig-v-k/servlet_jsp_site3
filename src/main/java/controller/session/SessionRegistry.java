@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class SessionRegistry {
 
-    private static final Map<String, HttpSession> SESSIONS = new Hashtable<>();
+    private static Map<String, HttpSession> SESSIONS = new Hashtable<>();
 
     public static void addSession(HttpSession session)
     {
