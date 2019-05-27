@@ -23,13 +23,16 @@ public class ContextPathFilter implements Filter {
         String action = req.getServletPath();
         switch (action) {
             case "/home":
-//                    updateRubbsih(req, resp);
                 req.getRequestDispatcher("home.jsp").forward(req, res);
+                filterChain.doFilter(req, res);
+                return;
+            case "/courses":
+                req.getRequestDispatcher("courses.jsp").forward(req, res);
                 filterChain.doFilter(req, res);
                 return;
         }
 
-        req.getRequestDispatcher("login.jsp").forward(req, res);
+        req.getRequestDispatcher("home.jsp").forward(req, res);
         filterChain.doFilter(req, res);
         return;
     }

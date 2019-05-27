@@ -12,17 +12,19 @@
 </head>
 <body>
     <div style="padding: 5px;">
-        <a href="${pageContext.request.contextPath}/home">Home</a>
-        |
-        <a href="${pageContext.request.contextPath}/courses">Courses</a>
-        |
-        <a href="${pageContext.request.contextPath}/professors">Professors</a>
-        |
-        <a href="${pageContext.request.contextPath}/students">Students</a>
-        |
-        <a href="${pageContext.request.contextPath}/login">Login</a>
-        |
-        <a href="${pageContext.request.contextPath}/logout">Logout</a>
+        <form action="${pageContext.request.contextPath}/context" method="get">
+            <a href="${pageContext.request.contextPath}/home">Home</a>
+            |
+            <a href="${pageContext.request.contextPath}/courses">Courses</a>
+            |
+            <a href="${pageContext.request.contextPath}/professors">Professors</a>
+            |
+            <a href="${pageContext.request.contextPath}/students">Students</a>
+            |
+            <a href="${pageContext.request.contextPath}/login">Login</a>
+            |
+            <a href="${pageContext.request.contextPath}/logout">Logout</a>
+        </form>
     </div>
 </body>
 </html>

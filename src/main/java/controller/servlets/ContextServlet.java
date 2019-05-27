@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @WebServlet(
         name = "context_servlet",
-        urlPatterns = "/contextServlet.a.b.c"
+        urlPatterns = "/context"
 )
 public class ContextServlet extends HttpServlet {
 

@@ -10,7 +10,7 @@ import java.io.IOException;
 
 @WebServlet(
         name = "login_servlet",
-        urlPatterns = "/loginServlet.a.b.c"
+        urlPatterns = "/login"
 )
 public class LoginServlet extends HttpServlet {
     @Override
