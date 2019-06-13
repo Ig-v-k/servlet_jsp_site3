@@ -22,37 +22,30 @@ public class ContextServlet extends HttpServlet implements Servlet {
         String action = request.getParameter("action");
         String contextPath = "/WEB-INF/views/";
         String page = null;
-        String a = null;
         if (action.equals("home")) {
             page = "home.jsp";
-            a = contextPath + page;
-            request.getRequestDispatcher(a).forward(request, response);
+            contextPath += page;
         }
         else if (action.equals("courses")) {
             page = "courses.jsp";
-            a = contextPath + page;
-            request.getRequestDispatcher(a).forward(request, response);
+            contextPath += page;
         }
         else if (action.equals("professors")) {
             page = "professors.jsp";
-            a = contextPath + page;
-            request.getRequestDispatcher(a).forward(request, response);
+            contextPath += page;
         }
         else if (action.equals("students")) {
             page = "students.jsp";
-            a = contextPath + page;
-            request.getRequestDispatcher(a).forward(request, response);
+            contextPath += page;
         }
         else if (action.equals("login")) {
             page = "login.jsp";
-            a = contextPath + page;
-            request.getRequestDispatcher(a).forward(request, response);
+            contextPath += page;
         }
         else if (action.equals("logout")) {
             page = "logout.jsp";
+            contextPath += page;
             request.setAttribute("user", "AAAA");
-            a = contextPath + page;
-            request.getRequestDispatcher(a).forward(request, response);
         }
 /*        else {
             try {
@@ -61,6 +54,7 @@ public class ContextServlet extends HttpServlet implements Servlet {
                 e.printStackTrace();
             }
         }*/
+        request.getRequestDispatcher(contextPath).forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
