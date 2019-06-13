@@ -1,10 +1,11 @@
 package controller.dao;
 
 import java.util.List;
+import java.util.Optional;
 
-public interface DAO<A, B extends Integer> {
+public interface DAO<A, B> {
 
-    void add(A o);
+    void add(B o);
 
     void delete(B o);
 

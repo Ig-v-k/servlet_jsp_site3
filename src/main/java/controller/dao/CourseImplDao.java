@@ -3,22 +3,11 @@ package controller.dao;
 import model.Course;
 
 import java.util.List;
+import java.util.Optional;
 
 public class CourseImplDao extends ImplCourseDao {
-
-    public CourseImplDao() {
-    }
-
-    private static class SingletonHelper {
-        private static final CourseImplDao INSTANCE = new CourseImplDao();
-    }
-
-    public static CourseImplDao getInstance() {
-        return SingletonHelper.INSTANCE;
-    }
-
     @Override
-    public void add(Course o) {
+    public void add(Integer n) {
 
     }
 
