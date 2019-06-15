@@ -5,6 +5,7 @@
   Time: 21:26
   To change this template use File | Settings | File Templates.
 --%>
+<%@include file="baseInclude.jspf"%>
 <%@ page language="java" pageEncoding="UTF-8" %>
 <html>
 <head>

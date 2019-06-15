@@ -10,7 +10,7 @@ public class AuthenticationFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpSession session = ((HttpServletRequest)request).getSession(false);
-        if(session == null || session.getAttribute("username") == null)
+        if(session == null || (session.getAttribute("username").equals("") && session.getAttribute("password").equals("")))
             ((HttpServletResponse)response).sendRedirect("login");
         else
             chain.doFilter(request, response);

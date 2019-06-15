@@ -14,24 +14,23 @@ import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
 public class StudentServlet extends HttpServlet implements Servlet {
     private Integer i = 0;
-    public Connection conn;
+    private static Connection conn;
+    private static PreparedStatement ps;
+    private static DataSource ds;
     private static Logger log = Logger.getLogger(String.valueOf(StudentServlet.class));
-//    private DataSource ds;
-//    @Override
-//    public void init(ServletConfig config) throws ServletException {
-//        try{
-//            InitialContext a = new InitialContext();
-//            Context b = a.lookup()
-//        }
-//    }
+    static{
 
+    }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        req.getRequestDispatcher("/students.jsp").forward(req, resp);
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
