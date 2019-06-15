@@ -32,8 +32,7 @@ public class SessionListenerServlet implements HttpSessionIdListener, HttpSessio
 
     }
 
-    private String date()
-    {
+    private String date() {
         return this.formatter.format(new Date());
     }
 }

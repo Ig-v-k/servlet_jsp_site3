@@ -2,19 +2,19 @@
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" metadata-complete="true" version="4.0">
 
 
-
+    <!--    JSP CONFIG-->
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
             <url-pattern>*.jspf</url-pattern>
             <page-encoding>UTF-8</page-encoding>
             <scripting-invalid>false</scripting-invalid>
-<!--            <include-prelude>/WEB-INF/views/base.jspf</include-prelude>-->
+<!--            <include-prelude>/WEB-INF/views/baseInclude.jspf</include-prelude>-->
             <trim-directive-whitespaces>true</trim-directive-whitespaces>
             <default-content-type>text/html</default-content-type>
         </jsp-property-group>
     </jsp-config>
-
+    <!--    SESSION CONFIG-->
     <session-config>
         <session-timeout>30</session-timeout>
         <cookie-config>
@@ -49,15 +49,23 @@
         <servlet-name>student_servlet</servlet-name>
         <url-pattern>/students.do</url-pattern>
     </servlet-mapping>
-    <!--    SERVLET - FILTER -->
+    <!--    SERVLET FILTER -->
     <filter>
         <filter-name>authenticationFilter</filter-name>
         <filter-class>controller.filter.AuthenticationFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>qwe_</filter-name>
+        <filter-class>controller.filter.qwe</filter-class>
     </filter>
     <!--    SERVLET - FILTER - MAPPING -->
     <filter-mapping>
         <filter-name>authenticationFilter</filter-name>
         <url-pattern>/students</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>qwe_</filter-name>
+        <url-pattern>/login.do</url-pattern>
     </filter-mapping>
 
     <!--    <error-page>-->

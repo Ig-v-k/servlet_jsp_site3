@@ -1,6 +1,6 @@
 package db_utils;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import com.mysql.cj.jdbc.MysqlDataSource;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,7 +27,7 @@ public class DBUtils {
     private static DataSource ds;
     final Logger LOGGER = Logger.getLogger(DBUtils.class.getName());
 
-    DBUtils() {
+    DBUtils() throws SQLException {
 
         MysqlDataSource mysqlDataSource = new MysqlDataSource();
         String rootpath = Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("database.properties").getPath());
