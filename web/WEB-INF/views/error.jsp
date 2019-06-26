@@ -1,21 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
   User: wykladowca
-  Date: 13.06.2019
-  Time: 12:49
+  Date: 26.06.2019
+  Time: 21:09
   To change this template use File | Settings | File Templates.
 --%>
-<%@include file="baseInclude.jspf"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Students</title>
+    <title>ERROR</title>
 </head>
 <body>
     <%@include file="_menu.jsp"%>
-    <h1>STUDENTS PAGE</h1>
-    <h2>
-        <p>Hello</p>
-    </h2>
+    <h1 style="color: darkred;">${a}</h1>
 </body>
 </html>

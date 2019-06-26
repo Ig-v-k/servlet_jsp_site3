@@ -25,4 +25,7 @@
         <input type="password" name="password" /><br /><br />
         <input type="submit" value="Log In" />
     </form>
+    <p style="color:blue;">Login with:</p>
+
+    admin/admin <br>
 </template:loggedOut>

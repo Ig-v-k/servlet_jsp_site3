@@ -2,7 +2,6 @@ package controller.servlets;
 
 import db_utils.DBUtils;
 
-import javax.ejb.Init;
 import javax.naming.InitialContext;
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
@@ -30,7 +29,7 @@ public class StudentServlet extends HttpServlet implements Servlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        req.getRequestDispatcher("/students.jsp").forward(req, resp);
+        req.getRequestDispatcher("/error.jsp").forward(req, resp);
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

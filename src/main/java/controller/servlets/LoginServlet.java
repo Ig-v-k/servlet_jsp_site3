@@ -1,5 +1,6 @@
 package controller.servlets;
 import javax.servlet.Servlet;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.SessionCookieConfig;
 import javax.servlet.annotation.WebServlet;
@@ -8,12 +9,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Objects;
+
 //@WebServlet(
 //        name = "login_servlet",
 //        urlPatterns = "/login"
 //)
 public class LoginServlet extends HttpServlet implements Servlet
 {
+    static{
+        ServletContext cs = null;
+        Objects.requireNonNull(cs).setAttribute("z", 0);
+    }
+    ServletContext scs;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
@@ -54,13 +62,14 @@ public class LoginServlet extends HttpServlet implements Servlet
         int a = (int) session.getAttribute("asd");
         if(a == 1)
         {
+            scs.setAttribute("z", a);
             session.setAttribute("a", "SUCCESSFUL!!!");
             req.changeSessionId();
             resp.sendRedirect("students.do");
         }
         else
         {
-            session.setAttribute("a", "PLEASE LOG IN HOW THE ADMIN!!!");
+            session.setAttribute("a", "PLEASE LOG IN, HOW BE THE ADMIN!!!");
             req.changeSessionId();
             resp.sendRedirect("students.do");
         }

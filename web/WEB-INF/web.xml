@@ -14,6 +14,16 @@
             <default-content-type>text/html</default-content-type>
         </jsp-property-group>
     </jsp-config>
+
+<!--    <context-param>-->
+<!--        <param-name>z</param-name>-->
+<!--        <param-value>1</param-value>-->
+<!--    </context-param>-->
+    <context-param>
+        <param-name>zz</param-name>
+        <param-value>false</param-value>
+    </context-param>
+
     <!--    SESSION CONFIG-->
     <session-config>
         <session-timeout>30</session-timeout>
@@ -58,7 +68,15 @@
         <filter-name>qwe_</filter-name>
         <filter-class>controller.filter.qwe</filter-class>
     </filter>
+<!--    <filter>-->
+<!--        <filter-name>startPage</filter-name>-->
+<!--        <filter-class>controller.filter.StartPage</filter-class>-->
+<!--    </filter>-->
     <!--    SERVLET - FILTER - MAPPING -->
+<!--    <filter-mapping>-->
+<!--        <filter-name>startPage</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
     <filter-mapping>
         <filter-name>authenticationFilter</filter-name>
         <url-pattern>/students</url-pattern>

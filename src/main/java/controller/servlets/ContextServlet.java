@@ -1,6 +1,7 @@
 package controller.servlets;
 
 import javax.servlet.Servlet;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +12,7 @@ import java.io.IOException;
 //@WebServlet("/context")
 public class ContextServlet extends HttpServlet implements Servlet {
     private static final long seriwalVersionUID = 102L;
-
+    private ServletContext q = getServletContext();
     public ContextServlet() {
         super();
     }
@@ -22,6 +23,12 @@ public class ContextServlet extends HttpServlet implements Servlet {
         String action = request.getParameter("action");
         String contextPath = "/WEB-INF/views/";
         String page = null;
+        String h = q.getInitParameter("zz");
+//        if(h.equals("false")) {
+//            page = "error.jsp";
+//            contextPath += page;
+//            request.getRequestDispatcher(contextPath).forward(request, response);
+//        }
         if (action.equals("home")) {
             page = "home.jsp";
             contextPath += page;
